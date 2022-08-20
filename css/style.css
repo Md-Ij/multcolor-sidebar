@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Roboto+Condensed&family=Roboto+Slab&display=swap');
+
+
+/*
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-p: font-family: 'Poppins', sans-serif;
+  --font-r: 'Roboto', sans-serif;
+  --font-rc: 'Roboto Condensed', sans-serif;
+  --font-robotSlab: 'Roboto Slab', serif;
+}
+
+.sidebar {
+  width: 180px;
+  min-height: 100%;
+  position: absolute;
+  background: #111827;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar-top, .sidebar-middle, .sidebar-bottom {
+  width: 80%;
+  /* background:yellow; */
+  padding:10px 0;
+  margin-bottom: 10px;
+  /* margin-top: 10px; */
+  display: flex;
+  align-items: center;
+  border-bottom:1px solid #4b4b4b;
+
+}
+.sidebar-top{
+  padding-bottom:10px;
+}
+.sidebar-middle{
+  padding-bottom:10px;
+}
+.sidebar-bottom{
+  border-bottom:none;
+  justify-content: center;
+}
+.logo {
+  font-size: 24px;
+  margin-right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.brand {
+  font-weight:500;
+  cursor: pointer;
+  font-family:var(--font-robotSlab);
+}
+.list{
+  list-style:none;
+  padding: 0;
+  width: 100%;
+}
+.list-item{
+  font-size:14px;
+  font-weight:500;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:10px;
+}
+.list-item-icon{
+  width: 30px;
+  font-size:20px;
+}
+.list-item:hover,
+.list-item.active{
+  background:#374151;
+  color:white;
+}
+.color-box{
+  width:20px;
+  height:20px;
+  border:1px solid rgb(252,191,191);
+  border-radius:5px;
+  cursor:pointer;
+  margin-right: 10px;
+}
+.dark{
+  background:#111827;
+}
+.night{
+  background:#312e81;
+}
+.light{
+  background:#fef4f6;
+}
+
+@media screen and (max-width:768px) {
+.sidebar{
+  width:50px;
+}
+.brand,.list-item-text{
+  display: none;
+}
+.sidebar-bottom{
+  flex-direction:column;
+}
+.color-box{
+  margin-bottom:10px;
+  margin-right:0;
+}
+}
+
+/* multicolor   */
+.sidebar.night{
+  background:#312e81;
+  color:#b4bbc7;
+}
+.list-item.active.night{
+  background:#4338ca;
+}
+
+.sidebar.light{
+  background:#f3f4f6;
+  color:#111827;
+}
+.list-item.active.light{
+  background:#d1d5db;
+  color: #111827;
+}
